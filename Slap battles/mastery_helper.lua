@@ -379,6 +379,22 @@ local tab = setmetatable({
         SlapEvent = "GRRRR",
         icon = {"smiley-angry"},
         help = true,
+        supported_gloves = {
+            helper = {
+                [3] = {
+                    "Replica",
+                    "Null",
+                },
+                [4] = {
+                    "Replica",
+                    "Null",
+                },
+            },
+        },
+        prior_task = {
+            3,
+            4,
+        },
     },
     GetSupportedGloves = function(self, glove)
         local gloves = {
