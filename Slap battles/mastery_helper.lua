@@ -374,6 +374,12 @@ local tab = setmetatable({
         icon = {"detective"},
         help = true,
     },
+    [32] = {
+        Name = "Rage",
+        SlapEvent = "GRRRR",
+        icon = {"smiley-angry"},
+        help = true,
+    },
     GetSupportedGloves = function(self, glove)
         local gloves = {
             helper = {},
