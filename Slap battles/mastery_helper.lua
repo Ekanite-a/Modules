@@ -380,6 +380,14 @@ local tab = setmetatable({
         icon = {"smiley-angry"},
         help = true,
         supported_gloves = {
+            recipient = {
+                [3] = {
+                    "Null",
+                },
+                [4] = {
+                    "Null",
+                },
+            },
             helper = {
                 [3] = {
                     "Replica",
