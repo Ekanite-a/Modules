@@ -200,7 +200,6 @@ local tab = setmetatable({
                     "Null",
                 },
                 [2] = {
-                    "Replica",
                     "Null",
                 },
             },
