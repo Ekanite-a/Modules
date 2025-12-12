@@ -403,6 +403,12 @@ local tab = setmetatable({
             4,
         },
     },
+    [33] = {
+        Name = "Tinkerer",
+        SlapEvent = "TinkererHit",
+        icon = {"robot"},
+        help = true,
+    },
     GetSupportedGloves = function(self, glove)
         local gloves = {
             helper = {},
