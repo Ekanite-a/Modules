@@ -408,6 +408,7 @@ local tab = setmetatable({
         SlapEvent = "TinkererHit",
         icon = {"robot"},
         help = true,
+        HelperPosOffset = Vector3.new(0, -10, -4),
     },
     GetSupportedGloves = function(self, glove)
         local gloves = {
