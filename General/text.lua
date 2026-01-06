@@ -13,7 +13,7 @@ local randStr = function(len)
     return table.concat(t)
 end
 
-text.create = function(TextSettings)
+Text.create = function(TextSettings)
     --[[
         TextSettings: table = {
             x: number,
