@@ -416,37 +416,12 @@ local tab = setmetatable({
         icon = {"rectangle"},
         help = true,
     },
-    GetSupportedGloves = function(self, glove)
-        local gloves = {
-            helper = {},
-            recipient = {},
-        }
-        if not self[glove].supported_gloves then
-            return gloves
-        end
-
-        if self[glove].supported_gloves.recipient then
-            for i = 1, 7 do
-                if self[glove].supported_gloves.recipient[i] then
-                    table.insert(
-                        gloves.recipient,
-                        self[glove].supported_gloves.recipient[i]
-                    )
-                end
-            end
-        end
-        
-        if self[glove].prior_task then
-            for i, v in ipairs(self[glove].prior_task) do
-                table.insert(
-                    gloves.helper,
-                    self[glove].supported_gloves.helper[v]
-                )
-            end
-        end
-
-        return gloves
-    end,
+    [35] = {
+        Name = "Bubble",
+        SlapEvent = "",
+        icon = {"bowling-ball"},
+        help = true,
+    }
 }, {
     __index = function(t, val)
         for i, v in ipairs(t) do
@@ -456,6 +431,39 @@ local tab = setmetatable({
         end
     end
 })
+
+tab.GetSupportedGloves = function(self, glove)
+    local gloves = {
+        helper = {},
+        recipient = {},
+    }
+    if not self[glove].supported_gloves then 
+        return gloves
+    end
+
+    if self[glove].supported_gloves.recipient then
+        for i = 1, 7 do
+            if not self[glove].supported_gloves.recipient[i] then
+                continue
+            end
+            table.insert(
+                gloves.recipient,
+                self[glove].supported_gloves.recipient[i]
+            )
+        end
+    end
+        
+    if self[glove].prior_task then
+        for i, v in ipairs(self[glove].prior_task) do
+            table.insert(
+                gloves.helper,
+                self[glove].supported_gloves.helper[v]
+            )
+        end
+    end
+
+    return gloves
+end
 
 for i, v in ipairs(tab) do
     if not v.HelperPosOffset then
