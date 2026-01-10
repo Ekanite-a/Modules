@@ -421,6 +421,7 @@ local tab = setmetatable({
         SlapEvent = "",
         icon = {"bowling-ball"},
         help = true,
+        HelperPosOffset = Vector3.new(0, 0, -15),
     }
 }, {
     __index = function(t, val)
