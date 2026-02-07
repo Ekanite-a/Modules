@@ -32,6 +32,7 @@ Text.create = function(TextSettings)
     screenGui.Name = randStr(10)
     screenGui.DisplayOrder = 999999
     screenGui.IgnoreGuiInset = true
+    screenGui.ResetOnSpawn = false
 
     local frame = Instance.new("Frame", screenGui)
     frame.Name = randStr(10)
