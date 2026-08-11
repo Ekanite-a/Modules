@@ -1,0 +1,32 @@
+name: Auto Build & Release on Push
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run build script
+        run: |
+          chmod +x ./build.sh
+          ./build.sh
+
+      - name: Update Latest Release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: "Latest Auto Build"
+          tag_name: "latest"
+          prerelease: false
+          files: dist/*.lua
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
