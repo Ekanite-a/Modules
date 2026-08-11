@@ -1,9 +1,11 @@
 #!/bin/bash
 
-for folder in *; do
-    [[ -d "$folder" ]] || continue
+mkdir -p dist
 
-    output_file="${folder}.lua"
+for folder in *; do
+    [[ -d "$folder" && "$folder" != "dist" ]] || continue
+
+    output_file="dist/${folder}.lua"
     > "$output_file"
 
     return_table="return {"
