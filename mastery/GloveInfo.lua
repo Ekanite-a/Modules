@@ -44,7 +44,6 @@ local function createInfo(settings)
 
     return t
 end
-
 createInfo = AutoArgsWrap(createInfo, {template = {"Name", "RequireHelper", "SlapRemote", "AbilityRemote", "HelperOffset"}})
 
 local raw_data = {
@@ -85,7 +84,7 @@ local raw_data = {
     {"Bubble", true, "BubbleHit", {"BubbleThrow"}, {0, 0, -15}},
     {"Phantom", true, "PhantomHit", {"PhantomDash"}},
     {"Acrobat", true, "AcHit"},
-    {"Spring", true, "springhit", HelperOffset = {0, 0, -3}},
+    {"Spring", true, "springhit", HelperOffset = {0, 0, -1}},
     {"Soul", true, "GeneralHit", {"GeneralAbility", "soul"}},
     {"Thanos", true, "GeneralHit", {"GeneralAbility"}},
     {"Eggler", true, "GeneralHit", {"GeneralAbility", "EgglerRAbility"}, {0, 0, -5}},
