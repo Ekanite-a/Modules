@@ -90,10 +90,7 @@ finder._alias = setmetatable({
 function finder._createSafeProxy(object)
     return setmetatable({}, {
         __index = function(self, key)
-            if object ~= nil then
-                local suc, result = pcall(function() return object[key] end)
-                if suc then return self._createSafeProxy(result) end
-            end
+            if object ~= nil then return finder._createSafeProxy(object[key]) end
             return finder._createSafeProxy(nil)
         end,
         __call = function(self, ...)
