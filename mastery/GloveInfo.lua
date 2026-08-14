@@ -83,7 +83,7 @@ local raw_data = {
     {"Plank", true, "GeneralHit", {"GeneralAbility"}},
     {"Bubble", true, "BubbleHit", {"BubbleThrow"}, {0, 0, -15}},
     {"Phantom", true, "PhantomHit", {"PhantomDash"}},
-    {"Acrobat", true, "AcHit"},
+    {"Acrobat", true, "AcHit", HelperOffset = {0, 0, -5}},
     {"Spring", true, "springhit", HelperOffset = {0, 0, -3}},
     {"Soul", true, "GeneralHit", {"GeneralAbility", "soul"}},
     {"Thanos", true, "GeneralHit", {"GeneralAbility"}},
