@@ -95,6 +95,7 @@ local raw_data = {
     {"Gummy", true, "GeneralHit"},
     {"Firework", true, "GeneralHit", {"GeneralAbility"}, {0, 0, -20}},
     {"Pinwheel", true, "GeneralHit", {"GeneralAbility"}},
+    {"Roguelike", true, "GeneralHit"},
 }
 
 
