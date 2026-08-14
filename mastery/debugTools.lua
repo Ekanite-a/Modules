@@ -171,11 +171,11 @@ function sender:ChangeChannel(name)
 
     self._currentChannel = self._channels[name]
 end
-function sender.Send(ctx)
+function sender:Send(ctx)
     ctx = {content = tostring(ctx)}
 
     request({
-        Url = sender._currentChannel,
+        Url = self._currentChannel,
         Method = "POST",
         Headers = {["Content-Type"] = "application/json"},
         Body = game:GetService("HttpService"):JSONEncode(ctx)

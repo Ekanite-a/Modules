@@ -84,7 +84,7 @@ local raw_data = {
     {"Bubble", true, "BubbleHit", {"BubbleThrow"}, {0, 0, -15}},
     {"Phantom", true, "PhantomHit", {"PhantomDash"}},
     {"Acrobat", true, "AcHit"},
-    {"Spring", true, "springhit", HelperOffset = {0, 0, -1}},
+    {"Spring", true, "springhit", HelperOffset = {0, 0, -3}},
     {"Soul", true, "GeneralHit", {"GeneralAbility", "soul"}},
     {"Thanos", true, "GeneralHit", {"GeneralAbility"}},
     {"Eggler", true, "GeneralHit", {"GeneralAbility", "EgglerRAbility"}, {0, 0, -5}},
