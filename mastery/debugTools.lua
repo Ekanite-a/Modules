@@ -391,4 +391,5 @@ return {
     deepcopy = deepcopy,
     initialInstance = initialInstance,
     initialLog = initialLog,
+    createProxy = createProxy,
 }
